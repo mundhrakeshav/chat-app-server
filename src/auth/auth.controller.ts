@@ -22,7 +22,7 @@ export class AuthController {
   @Post('register')
   @UsePipes(new ValidationPipe())
   async registerUser(@Body() createUserDto: CreateUserDto) {
-    this.userService.createUser();
+    this.userService.createUser(createUserDto);
   }
 
   @Post('login')
