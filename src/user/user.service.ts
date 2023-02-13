@@ -1,9 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { IUserService } from './user';
+import { CreateUserDetails } from 'src/utils/types';
 
 @Injectable()
 export class UserService implements IUserService {
-  createUser() {
-    console.log('UserService.CreateUser');
+  createUser(userDetails: CreateUserDetails) {
+    console.log(userDetails);
   }
 }
